@@ -38,7 +38,13 @@ def add_visitante(form: VisitanteSchema):
         nome=form.nome,
         cpf=form.cpf,
         status=StatusVisitante[form.status],
-        observacao=form.observacao)
+        observacao=form.observacao,
+        cep=form.cep,
+        logradouro=form.logradouro,
+        numero=form.numero,
+        bairro=form.bairro,
+        cidade=form.cidade,
+        estado=form.estado)
     logger.debug(f"Adicionando visitante de nome: '{form.nome}'")
     try:
         # criando conexão com a base
@@ -79,6 +85,12 @@ def update_visitante(form: VisitanteUpdateSchema):
     visitante.cpf = form.cpf
     visitante.status = form.status
     visitante.observacao = form.observacao
+    visitante.cep = form.cep
+    visitante.logradouro = form.logradouro
+    visitante.numero = form.numero
+    visitante.bairro = form.bairro
+    visitante.cidade = form.cidade
+    visitante.estado = form.estado
         
     if not visitante:
         # se o visitante não foi encontrado

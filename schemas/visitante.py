@@ -12,15 +12,27 @@ class VisitanteSchema(BaseModel):
     cpf: str = "123.456.789-10"
     status: str = "ATIVO"
     observacao: str = "Analista de Sistemas"
+    cep: str = "24020085"
+    logradouro: str = "Rua da Conceição"
+    numero: str = "101"
+    bairro: str = "Centro"
+    cidade: str = "Niterói"
+    estado: str = "RJ"
 
 class VisitanteUpdateSchema(BaseModel):
-    """ Define como um novo visitante a ser inserido deve ser representado
+    """ Define como um novo visitante a ser atualizado deve ser representado
     """
     id: int = 1
     nome: str = "Flávio Portugal"
     cpf: str = "123.456.789-10"
     status: str = "ATIVO"
     observacao: str = "Analista de Sistemas"
+    cep: str = "24020085"
+    logradouro: str = "Rua da Conceição"
+    numero: str = "101"
+    bairro: str = "Centro"
+    cidade: str = "Niterói"
+    estado: str = "RJ"
 
 
 class VisitanteBuscaSchema(BaseModel):
@@ -52,6 +64,12 @@ def apresenta_visitantes(visitantes: List[Visitante]):
             "cpf": visitante.cpf,
             "status": visitante.status.value,
             "observacao": visitante.observacao,
+            "cep": visitante.cep,
+            "logradouro": visitante.logradouro,
+            "numero": visitante.numero,
+            "bairro": visitante.bairro,
+            "cidade": visitante.cidade,
+            "estado": visitante.estado,
             "data_atualizacao": DataUtil.formatar(visitante.data_atualizacao),
             "data_criacao": DataUtil.formatar(visitante.data_criacao)
         })
@@ -66,6 +84,12 @@ class VisitanteViewSchema(BaseModel):
     cpf: str = "123.456.789-10"
     status: StatusVisitante = StatusVisitante.ATIVO
     observacao: str = "Analista de Sistemas"
+    cep: str = "24020085"
+    logradouro: str = "Rua da Conceição"
+    numero: str = "101"
+    bairro: str = "Centro"
+    cidade: str = "Niterói"
+    estado: str = "RJ"
     data_atualizacao: datetime = DataUtil.formatar(datetime.now())
     data_criacao: datetime = DataUtil.formatar(datetime.now())
 
@@ -93,6 +117,12 @@ def apresenta_visitante(visitante: Visitante):
         "cpf": visitante.cpf,
         "status": visitante.status.name,
         "observacao": visitante.observacao,
+        "cep": visitante.cep,
+        "logradouro": visitante.logradouro,
+        "numero": visitante.numero,
+        "bairro": visitante.bairro,
+        "cidade": visitante.cidade,
+        "estado": visitante.estado,
         "data_atualizacao": DataUtil.formatar(visitante.data_atualizacao),
         "data_criacao": DataUtil.formatar(visitante.data_criacao),
     }
