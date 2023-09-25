@@ -54,7 +54,7 @@ $ sudo docker build -t backend:1.0 .
 Uma vez criada a imagem, para executar o container basta executar, **como administrador**, seguinte o comando:
 
 ```
-$ sudo docker run --rm -p 5000:80 backend:1.0
+$ sudo docker run --rm -p 5000:5000 backend:1.0
 ```
 
 Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador.
