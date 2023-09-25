@@ -1,8 +1,14 @@
-# Minha API
+# Minha API (Componente C)
 
-Este pequeno projeto é o meu MVP da Disciplina **Desenvolvimento Full Stack Básico**
+Este projeto é parte do meu MVP da disciplina **Arquitetura de Software**.
 
-O objetivo aqui é ilutsrar o conteúdo apresentado ao longo das três aulas da disciplina.
+Consiste em um back-end de um sistema de cadastro de visitantes, onde são disponibilidas rotas para obter, salvar, editar e excluir dados.
+
+O projeto de cadastro de visitantes, permite criar um visitante e cadastrar o seu acesso, a fim de ter um controle de entrada de pessoas.
+
+No cadastro de visitantes você pode criar, alterar, excluir e listar visitantes.
+
+No cadastro de acessos você pode criar e listar acessos..
 
 ---
 
@@ -52,4 +58,3 @@ $ sudo docker run --rm -p 8080:80 backend:1.0
 ```
 
 Uma vez executando, para acessar o front-end, basta abrir o [http://localhost:5000/#/](http://localhost:5000/#/) no navegador.
-
